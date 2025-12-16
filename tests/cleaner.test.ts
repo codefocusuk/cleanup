@@ -1,7 +1,7 @@
 import { describe, it, beforeAll, afterAll, expect } from 'vitest';
 import { mkdirSync, writeFileSync, rmSync, existsSync } from 'fs';
 import { join } from 'path';
-import { clean } from '../dist/lib/cleaner.js';
+import { cleanup } from '../dist/lib/cleaner.js';
 
 describe('Main Cleaner Module', () => {
   const testDir = join(process.cwd(), 'test-temp-main');
@@ -34,7 +34,7 @@ describe('Main Cleaner Module', () => {
       const originalCwd = process.cwd();
       process.chdir(projectDir);
 
-      await clean({ dryRun: true, quiet: true });
+      await cleanup({ dryRun: true, quiet: true });
 
       // Restore original directory
       process.chdir(originalCwd);
@@ -60,7 +60,7 @@ describe('Main Cleaner Module', () => {
       const originalCwd = process.cwd();
       process.chdir(projectDir);
 
-      await clean({ confirm: true, quiet: true });
+      await cleanup({ confirm: true, quiet: true });
 
       process.chdir(originalCwd);
 
@@ -87,7 +87,7 @@ describe('Main Cleaner Module', () => {
       const originalCwd = process.cwd();
       process.chdir(projectDir);
 
-      await clean({ confirm: true, quiet: true });
+      await cleanup({ confirm: true, quiet: true });
 
       process.chdir(originalCwd);
 
@@ -112,7 +112,7 @@ describe('Main Cleaner Module', () => {
 
       // Should not throw with verbose option
       await expect(async () => {
-        await clean({ dryRun: true, verbose: true, quiet: false });
+        await cleanup({ dryRun: true, verbose: true, quiet: false });
       }).not.toThrow();
 
       process.chdir(originalCwd);
@@ -133,7 +133,7 @@ describe('Main Cleaner Module', () => {
 
       // Should not throw with quiet option
       await expect(async () => {
-        await clean({ dryRun: true, quiet: true });
+        await cleanup({ dryRun: true, quiet: true });
       }).not.toThrow();
 
       process.chdir(originalCwd);
