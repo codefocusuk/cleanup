@@ -1,12 +1,12 @@
 {
   "name": "@codefocus/cleanup",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "A zero-dependency CLI tool to clean build artifacts and caches from Node.js projects",
   "type": "module",
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
   "bin": {
-    "clean": "./dist/bin/cleanup.js"
+    "cleanup": "./dist/bin/cleanup.js"
   },
   "files": [
     "dist",
