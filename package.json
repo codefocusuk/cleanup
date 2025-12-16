@@ -55,12 +55,12 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "homepage": "https://github.com/codefocusuk/clean#readme",
+  "homepage": "https://github.com/codefocusuk/cleanup#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/codefocusuk/clean.git"
+    "url": "https://github.com/codefocusuk/cleanup.git"
   },
   "bugs": {
-    "url": "https://github.com/codefocusuk/clean/issues"
+    "url": "https://github.com/codefocusuk/cleanup/issues"
   }
 }
