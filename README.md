@@ -311,7 +311,7 @@ Issues and PRs are welcome for edge cases and safety improvements
 
 ```bash
 # Clone the repository
-git clone https://github.com/codefocusuk/clean.git
+git clone https://github.com/codefocusuk/cleanup.git
 cd clean
 
 # Install dependencies
