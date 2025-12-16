@@ -6,7 +6,7 @@
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
   "bin": {
-    "clean": "./dist/bin/clean.js"
+    "clean": "./dist/bin/cleanup.js"
   },
   "files": [
     "dist",
@@ -18,7 +18,7 @@
     "build": "tsc",
     "build:tsc": "tsc",
     "dev": "tsc --watch",
-    "clean": "node dist/bin/clean.js",
+    "clean": "node dist/bin/cleanup.js",
     "prepublishOnly": "npm run build",
     "publish:npm": "npm publish --access public",
     "publish:dry": "npm publish --dry-run",

@@ -34,10 +34,10 @@ Thank you for your interest in contributing to @codefocus/clean! We welcome cont
 ```bash
 # Build and run
 npm run build
-node dist/bin/clean.js --help
+node dist/bin/cleanup.js --help
 
 # Or use the clean script
-npm run clean -- --dry-run
+npm run cleanup -- --dry-run
 ```
 
 ### Watch Mode

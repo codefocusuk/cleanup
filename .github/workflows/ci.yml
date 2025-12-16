@@ -37,7 +37,7 @@ jobs:
         continue-on-error: true  # Don't fail if no tests yet
 
       - name: Test CLI
-        run: node dist/bin/clean.js --help
+        run: node dist/bin/cleanup.js --help
 
       - name: Upload build artifacts
         if: matrix.os == 'ubuntu-latest' && matrix.node-version == 20
