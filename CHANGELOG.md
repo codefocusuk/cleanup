@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Future releases will be documented here
 
+### [0.7.21] - 2025-12-16
+- **Documentation**: Expanded "Every project leaves behind junk:" section in README.md with comprehensive examples of cleanup targets
+- **Documentation**: Added new "Customizing Cleanup Targets" section explaining how to modify source code and add custom cleanup targets
+
 ---
 
 ## [0.7.0] - 2025-12-16

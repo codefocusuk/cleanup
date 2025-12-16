@@ -9,7 +9,7 @@
 
   **A zero-dependency CLI to safely clean build artifacts for Node.js projects.**
 
-If you've ever run `rm -rf node_modules`, broken something, or maintained a pile of messy cleanup scripts — this replaces all of that with one safe command.
+If you've ever run `rm -rf node_modules`, broken something, or maintained one or more cleanup scripts — this replaces all of that with one safe command.
 
 ---
 
@@ -17,14 +17,16 @@ If you've ever run `rm -rf node_modules`, broken something, or maintained a pile
 
 Every project leaves behind junk:
 
-- `node_modules`, `dist`, `.next`
+- `node_modules`, `dist`, `.next`, `.nuxt`, `.vite`
+- `build`, `coverage`, `tmp`, `temp`
+- `.turbo`, `.BUILD`, `.dist`, `.test-report`
+- `.nyc_output`
 
 Most developers clean these with:
 
 - handwritten scripts
 - `git clean -xfd` (not good)
 - shell commands
-- or muscle memory and hope
 
 `@codefocus/cleanup` aims to give you a single, predictable, cross-platform command:
 
@@ -114,6 +116,57 @@ Perform the cleanup:
 ```bash
 npx @codefocus/cleanup --confirm
 ```
+
+---
+
+## Customizing Cleanup Targets
+
+You can modify what gets cleaned by editing the source code. The cleanup targets are defined in `src/lib/constants.ts` in the `CLEANUP_TARGETS` array.
+
+### Adding custom targets
+
+To add your own directories or files to clean:
+
+1. **Fork or clone the repository**
+2. **Edit `src/lib/constants.ts`**
+3. **Add your custom targets to the `CLEANUP_TARGETS` array**
+
+For example, to add `.parcel-cache` and `dist-temp`:
+
+```typescript
+export const CLEANUP_TARGETS: CleanupTarget[] = [
+  // ... existing targets
+  { name: '.parcel-cache', description: 'Parcel cache directory', recursive: true },
+  { name: 'dist-temp', description: 'Temporary distribution files', recursive: true },
+  // ... add more as needed
+];
+```
+
+### Target structure
+
+Each cleanup target has:
+- `name`: Directory or file name to clean
+- `description`: Human-readable description
+- `recursive`: Whether to search subdirectories (`true`/`false`)
+
+### Building your changes
+
+After modifying the targets:
+
+```bash
+# Build the project
+npm run build
+
+# Use your customized version
+npx .
+```
+
+### Sharing custom targets
+
+If you think your custom targets would be useful to others:
+- Consider contributing them back to the project
+- Open an issue to discuss adding them to the default set
+- Fork the project to maintain your own version
 
 ---
 
