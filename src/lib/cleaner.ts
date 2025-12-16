@@ -8,7 +8,7 @@ import { clearDirectory, cleanNodeModules } from './utils/cleaner.js';
  * Main cleanup function
  * @param options - CLI options
  */
-export async function clean(options: CleanOptions = {}): Promise<void> {
+export async function cleanup(options: CleanOptions = {}): Promise<void> {
   const { dryRun = false, confirm = false, verbose = false, quiet = false } = options;
 
   if (!quiet) {

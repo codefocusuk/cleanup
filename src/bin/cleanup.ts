@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { clean } from '../lib/index.js';
+import { cleanup } from '../lib/index.js';
 
 // Types
 interface CLIOptions {
@@ -122,7 +122,7 @@ async function main(): Promise<void> {
   }
 
   try {
-    await clean(options);
+    await cleanup(options);
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
     console.error('Error:', errorMessage);

@@ -1,5 +1,5 @@
 // Main cleanup function
-export { clean } from './cleaner.js';
+export { cleanup } from './cleaner.js';
 
 // Types
 export type {
