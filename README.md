@@ -1,11 +1,11 @@
 # @codefocus/cleanup
 
-[![npm version](https://img.shields.io/npm/v/@codefocus/clean.svg)](https://www.npmjs.com/package/@codefocus/clean)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/@codefocus/clean@0.7.0)](https://bundlephobia.com/package/@codefocus/clean@0.7.0)
+[![npm version](https://img.shields.io/npm/v/@codefocus/cleanup.svg)](https://www.npmjs.com/package/@codefocus/cleanup)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@codefocus/cleanup@0.7.21)](https://bundlephobia.com/package/@codefocus/cleanup@0.7.21)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D14.0.0-green.svg)](https://nodejs.org/)
-[![Coverage Status](https://coveralls.io/repos/github/codefocusuk/clean/badge.svg?branch=master)](https://coveralls.io/github/codefocusuk/clean?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/codefocusuk/cleanup/badge.svg?branch=master)](https://coveralls.io/github/codefocusuk/cleanup?branch=master)
 
   **A zero-dependency CLI to safely clean build artifacts for Node.js projects.**
 
@@ -18,9 +18,6 @@ If you've ever run `rm -rf node_modules`, broken something, or maintained a pile
 Every project leaves behind junk:
 
 - `node_modules`, `dist`, `.next`
-- `bin/`, `obj/`, `.vs`
-- `__pycache__`, `.pytest_cache`
-- `target/`, `build/`, `vendor/`
 
 Most developers clean these with:
 
@@ -122,14 +119,14 @@ npx @codefocus/cleanup --confirm
 
 ## CLI options
 
-| Flag | Description |
-|------|-------------|
-| `-d, --dry-run` | Show what would be deleted |
+| Flag            | Description                        |
+| --------------- | ---------------------------------- |
+| `-d, --dry-run` | Show what would be deleted         |
 | `-c, --confirm` | Confirm before deleting (optional) |
-| `-v, --verbose` | Detailed output |
-| `-q, --quiet` | Minimal output |
-| `-h, --help` | Help |
-| `-V, --version` | Version |
+| `-v, --verbose` | Detailed output                    |
+| `-q, --quiet`   | Minimal output                     |
+| `-h, --help`    | Help                               |
+| `-V, --version` | Version                            |
 
 ---
 
