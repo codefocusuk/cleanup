@@ -1,0 +1,66 @@
+{
+  "name": "@codefocus/cleanup",
+  "version": "0.7.0",
+  "description": "A zero-dependency CLI tool to clean build artifacts and caches from Node.js projects",
+  "type": "module",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
+  "bin": {
+    "clean": "./dist/bin/clean.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:tsc": "tsc",
+    "dev": "tsc --watch",
+    "clean": "node dist/bin/clean.js",
+    "prepublishOnly": "npm run build",
+    "publish:npm": "npm publish --access public",
+    "publish:dry": "npm publish --dry-run",
+    "test": "vitest --run --reporter=verbose",
+    "lint": "tsc --noEmit",
+    "prepack": "npm run build:tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.15"
+  },
+  "keywords": [
+    "cleanup",
+    "clean",
+    "build-artifacts",
+    "cache",
+    "node_modules",
+    "monorepo",
+    "cli",
+    "developer-tools",
+    "build-tools",
+    "disk-space",
+    "turbo",
+    "nextjs",
+    "nuxt",
+    "vite"
+  ],
+  "author": {
+    "name": "CodeFocus",
+    "url": "https://codefocus.co.uk"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "homepage": "https://github.com/codefocusuk/clean#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codefocusuk/clean.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codefocusuk/clean/issues"
+  }
+}
