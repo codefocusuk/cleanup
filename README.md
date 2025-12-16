@@ -149,7 +149,7 @@ await clean({
 Full TypeScript type definitions included:
 
 ```typescript
-import { CleanOptions, getCleanupTargets } from '@codefocus/clean';
+import { CleanOptions, getCleanupTargets } from '@codefocus/cleanup';
 
 const options: CleanOptions = {
   dryRun: true,
@@ -176,7 +176,7 @@ const targets = getCleanupTargets();
 - Deletes ignored but important files
 - One typo away from regret
 
-### `@codefocus/clean`
+### `@codefocus/cleanup`
 
 - Safe by default
 - Preview first
